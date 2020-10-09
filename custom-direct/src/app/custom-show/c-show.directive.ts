@@ -1,10 +1,19 @@
-import { Directive } from '@angular/core';
+import {Directive, HostListener, Input, TemplateRef, ViewContainerRef} from '@angular/core';
 
 @Directive({
-  selector: '[appCShow]'
+  selector: '[appCShow]',
+  exportAs: 'myShow'
 })
 export class CShowDirective {
 
-  constructor() { }
+  constructor(private viewContainerRef: ViewContainerRef) { }
 
+  @HostListener('dblclick') eventHandler(): void {
+    console.log(this.viewContainerRef);
+  }
+
+  @Input('appCShow') set inputHandler(input) {
+    console.log(input);
+  }
 }
+

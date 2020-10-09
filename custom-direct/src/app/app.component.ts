@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SampleComponent} from './sample/sample.component';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'custom-direct';
+  title = 'template-variable';
 
   ngIf = false;
+  sampleComponent = SampleComponent;
 
   Switch(): void {
     this.ngIf = !this.ngIf;

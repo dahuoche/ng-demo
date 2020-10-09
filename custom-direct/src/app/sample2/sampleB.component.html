@@ -1,0 +1,26 @@
+<a href="https://indepth.dev/exploring-angular-dom-manipulation-techniques-using-viewcontainerref/">Here</a>
+<button (click)="Switch()">switch</button>
+<ng-container  #myCont>
+  ng-container
+</ng-container>
+<ng-container *ngIf="!isShown; then myTemp">
+<!--<ng-container *ngIf="isShown; else myTemp">-->
+  暂时搜索不到您要的数据喔
+</ng-container>
+<ng-template #myTemp>
+  快快开始获取吧！
+</ng-template>
+
+<template #htTemp>
+  <p>html template</p>
+</template>
+
+<ng-content select="p">
+</ng-content>
+<div #myP>
+  <p>works</p>
+</div>
+<ng-content select="s">
+</ng-content>
+
+<!--<ng-container *ngComponentOutlet="sampleComponent"></ng-container>-->
