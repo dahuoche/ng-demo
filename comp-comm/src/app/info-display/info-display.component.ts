@@ -9,6 +9,8 @@ export class InfoDisplayComponent implements OnInit {
 
   @Input()
   inputValue: string;
+  @Input()
+  inputValue2: string;
 
   constructor() { }
 

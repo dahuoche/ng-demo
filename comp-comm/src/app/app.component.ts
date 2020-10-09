@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'comp-comm';
 
-  inputHold: string  ;
+  inputHold: string;
+
+  @ViewChild('infoCtrlRef') infoCtrlRef: ElementRef;
 
   inputHoldHandler($event): void {
      this.inputHold = $event;

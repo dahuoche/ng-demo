@@ -1,3 +1,5 @@
 <h4>Component Communication Demo</h4>
 <app-info-control (inputEmitter)="inputHoldHandler($event)"></app-info-control>
-<app-info-display [inputValue]="inputHold"></app-info-display>
+<!--<app-info-display [inputValue]="inputHold"></app-info-display>-->
+<app-info-control #infoCtrlRef></app-info-control>
+<app-info-display [inputValue2]="infoCtrlRef.inputValue"></app-info-display>
